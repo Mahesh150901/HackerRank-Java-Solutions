@@ -1,0 +1,27 @@
+import java.lang.*;
+import java.util.*;
+public class Tables
+{
+    public static void main(String[] args) 
+    {
+        int t,n,a,b,i,j,res;
+        Scanner sc=new Scanner(System.in);
+        t=sc.nextInt();
+        for(i=0;i<t;i++)
+        {
+           a=sc.nextInt();
+           b=sc.nextInt();
+           n=sc.nextInt();
+           res=a;
+           for(j=0;j<n;j++)
+           {
+               int x=(int)Math.pow(2,j);
+               res=res+((x*b));
+               System.out.print(res+" ");
+           }
+           System.out.print("\n");
+        }
+        
+    }
+    
+}
