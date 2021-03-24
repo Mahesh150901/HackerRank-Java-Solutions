@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static String getSmallestAndLargest(String s, int k)
+     {
+        int i;
+        String smallest =s.substring(0,k);
+        String largest =s.substring(0,k);
+        int z=s.length()-k+1;
+        for(i=0;i<z;i++)
+        {
+            String sub=s.substring(i, i+k);
+            int x=sub.compareTo(smallest);
+            if(x<0)
+            {
+                smallest=sub;
+            }
+        }
+        for(i=0;i<z;i++)
+        {
+            String sub=s.substring(i, i+k);
+            int y=sub.compareTo(largest);
+            if(y>0)
+            {
+                largest=sub;
+            }
+        }
+        return smallest + "\n" + largest;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.next();
+        int k = scan.nextInt();
+        scan.close();
+      
+        System.out.println(getSmallestAndLargest(s, k));
+    }
+}
