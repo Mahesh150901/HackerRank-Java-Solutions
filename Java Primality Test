@@ -1,0 +1,20 @@
+import java.lang.*;
+import java.util.*;
+import java.math.*;
+public class Tables2 
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        BigInteger a=new BigInteger(sc.nextLine());
+        if(a.isProbablePrime(1))
+        {
+            System.out.println("prime");
+        }
+        else
+        {
+            System.out.println("not prime");
+        }
+    }
+    
+}
